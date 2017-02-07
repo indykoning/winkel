@@ -1,24 +1,24 @@
 
 
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <title>Sliding Puzzle</title>
-  <style>
-  .picture {
-    border: 1px solid black;
-  }
-  </style>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <title>Puzzel</title>
 </head>
 <body>
-<img width="50px" height="50px" src="img/reload.ico" onclick="newBoard()">
-  <div id="title">
-    <h2>Puzzel</h2>
-  </div>
-<div id="knoppen">
-  <button onclick="Volwassene()">Volwassene</button>
-  <button onclick="Kind()">Kind</button>
+<div id="icon">
+<img width="50px" height="50px" src="img/reload.ico" onclick="newBoard()"; >
+</div>        
+<div id="header">
+    <div id="knoppen">
+        <button onclick="Volwassene()">Volwassene</button>
+        <button onclick="Kind()">Kind</button>
+        <h2>Puzzel</h2>
+    </div>
 </div>
+    <div style="height: 3em;"></div>
 <div id="puzzel" style="display: none;">
 <div id="slider">
     <form>
@@ -29,23 +29,20 @@
     <br>
   </div>
   <div id="main" class="main">
-    <canvas style="border: thick solid #0000FF" id="puzzle" width="300px" height="300px"></canvas>
+    <canvas id="puzzle" width="300px" height="300px"></canvas>
   </div>
   <script src="js/sliding.js"></script>
 </div>
 
 </body></html>
 <script>
-  var gebruiker_kind;
+  var gebruiker_Kind;
   puzzel = document.getElementById('puzzel');
-  knoppen = document.getElementById('knoppen');
   function Volwassene(){
-    knoppen.style.display = "none";
     puzzel.style.display = "block";
     gebruiker_Kind = 0;
   }
   function Kind(){
-    knoppen.style.display = "none";
     puzzel.style.display = "block";
     gebruiker_Kind = 1;
   }
